@@ -1,27 +1,15 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {fetchCoins} from "./api/cryptoAPI";
 import Coin from "./components/Coin/Coin";
+import CoinList from "./components/CoinList/CoinList";
+import CoinPricesPage from "./pages/CoinPricesPage";
 
 function App() {
 
-    const tesfunc = async () => {
-        const coins =  await fetchCoins()
-        console.log(coins)
-    }
-
-    useEffect(()=> {
-            tesfunc()
-    }, [])
 
   return (
     <div className="App">
-        <main>
-            <h2> Cryptocurrency App </h2>
-
-            <div>
-                <Coin name="usd" usdPrice="122" />
-            </div>
-        </main>
+        <CoinPricesPage/>
     </div>
   );
 }
