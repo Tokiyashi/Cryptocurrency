@@ -1,9 +1,5 @@
-import {useEffect, useState} from "react";
-import {fetchCoins} from "./api/cryptoAPI";
-import Coin from "./components/Coin/Coin";
-import CoinList from "./components/CoinList/CoinList";
 import CoinPricesPage from "./pages/CoinPricesPage";
-import {BrowserRouter, Route, Routes, Switch} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import CoinPage from "./pages/CoinPage";
 
 
