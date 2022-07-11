@@ -1,7 +1,8 @@
 import React from 'react';
 import cl from './Coin.module.css'
+import {Link} from "react-router-dom";
 
-const Coin = ({priceChangePercentage, name, usdPrice, coinId, image}) => {
+const Coin = ({priceChangePercentage, name, usdPrice, symbol, id, image}) => {
 
     const definePriceChange = () => {
         if (priceChangePercentage >= 0)
@@ -18,7 +19,7 @@ const Coin = ({priceChangePercentage, name, usdPrice, coinId, image}) => {
                 />
                 <div className={cl.coin__main__name}>
 
-                    <h3> {coinId.toUpperCase()}  </h3>
+                    <Link to={"/coin/" + id} > {symbol.toUpperCase()}  </Link>
                     <p> {name} </p>
                 </div>
             </div>
