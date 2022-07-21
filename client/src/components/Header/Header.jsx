@@ -8,6 +8,7 @@ const Header = () => {
 
     const [searchResult, setSearchResult] = useState('')
     const [search, setSearch] = useState('')
+    const [displayResult, setDisplayResult] = useState(false)
 
     useEffect(()=>{
         makeSearch(search)
@@ -30,14 +31,15 @@ const Header = () => {
             <h2> Cryptocurrency App </h2>
             <div>
                 <input
+                    onFocus={() => setDisplayResult(true)}
                     value={search}
                     onChange={e => setSearch(e.target.value)}
                     placeholder="find any coin..."
                 />
                 {
-                    searchResult.length > 0 && searchResult !== ''
+                    searchResult.length > 0 && searchResult !== '' && displayResult
                     &&
-                    <Dropdown>
+                    <Dropdown >
                         {
                             searchResult.map((item, index) => {
                             if (index < 5)

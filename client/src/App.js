@@ -2,6 +2,7 @@ import CoinPricesPage from "./pages/CoinPricesPage";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import CoinPage from "./pages/CoinPage";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 
 
@@ -16,7 +17,9 @@ function App() {
               <Route path="*" element={<CoinPricesPage/>}/>
 
           </Routes>
+          <Footer/>
       </BrowserRouter>
+
   );
 }
 

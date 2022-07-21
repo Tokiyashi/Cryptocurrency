@@ -2,14 +2,14 @@ import {API_KEY, BASE_DOMAIN} from "../consts/cryptoApiConsts";
 import axios from "axios";
 
 
-export const fetchCoins = async (selectedPage) => {
+export const fetchCoins = async (selectedPage, currency, order) => {
         const response = await axios.get(BASE_DOMAIN + "/coins/markets",
             { params: {
                 per_page: 20,
                 page: selectedPage,
-                order: "market_cap_desc",
+                order: order,
                 sparkline: false,
-                vs_currency: "usd"}
+                vs_currency: currency}
             })
         return response.data;
 }

@@ -22,23 +22,30 @@ main{
   align-items: center;
   background-color: #DFE3E8;
   min-height: 100vh;
+  padding-bottom: 20px;
 }
 
 header{
   padding: 20px;
-  color: #F9FAFB;
   background-color: #4062FF;
   align-items: center;
   flex-direction: column;
+  color: #F9FAFB;
   justify-content: center;
   display: flex;
 }
 
 .content{
+  width: 60%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   display: flex;
+}
+footer{
+  color: #F9FAFB;
+  background-color: #245085;
+  padding: 80px 20px;
 }
 
 a{
@@ -52,4 +59,8 @@ input{
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
+}
+select{
+  border-radius: 5px;
+  padding: 5px;
 }
