@@ -3,7 +3,6 @@ import axios from "axios";
 
 
 export const fetchCoins = async (selectedPage) => {
-    try {
         const response = await axios.get(BASE_DOMAIN + "/coins/markets",
             { params: {
                 per_page: 20,
@@ -12,12 +11,7 @@ export const fetchCoins = async (selectedPage) => {
                 sparkline: false,
                 vs_currency: "usd"}
             })
-        console.log(response)
         return response.data;
-    } catch(error) {
-        console.log(error)
-        return [];
-    }
 }
 
 export const makeQuery = async (input) => {
@@ -34,15 +28,10 @@ export const makeQuery = async (input) => {
 }
 
 export const fetchOneCoin = async (id) => {
-    try {
         const response = await axios.get(BASE_DOMAIN + "/coins/" + id,
             { params: {
                     query: id}
             })
         return response.data;
-    } catch(error) {
-        console.log(error)
-        return [];
-    }
 }
 

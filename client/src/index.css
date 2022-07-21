@@ -15,12 +15,23 @@ html,body
 }
 
 main{
+  padding-top: 20px;
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #DFE3E8;
   min-height: 100vh;
+}
+
+header{
+  padding: 20px;
+  color: #F9FAFB;
+  background-color: #4062FF;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
 }
 
 .content{
@@ -35,5 +46,5 @@ input{
   border: none;
   padding: 10px;
   margin: 10px 0;
-  border-radius: 15px;
+  border-radius: 5px;
 }
