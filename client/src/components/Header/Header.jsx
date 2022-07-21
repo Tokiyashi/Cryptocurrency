@@ -2,6 +2,7 @@ import React from 'react';
 import {makeQuery} from "../../api/cryptoAPI";
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
+import Dropdown from "../UI/Dropdown/Dropdown";
 
 const Header = () => {
 
@@ -35,20 +36,21 @@ const Header = () => {
                 />
                 {
                     searchResult.length > 0 && searchResult !== ''
-                    && searchResult.map((item, index) => {
+                    &&
+                    <Dropdown>
+                        {
+                            searchResult.map((item, index) => {
                             if (index < 5)
-                                return(
-                                    <Link to={"/coin/" + item.id} style={{
-                                        position: "absolute",
-                                        backgroundColor: "white",
-                                        color: "black",
-                                        top: index * 25 + 100,
-                                        }} key={item.id}>
-                                        {item.name}
-                                    </Link>
-                                )
+                            return(
+                            <Link to={"/coin/" + item.id}
+                                  className="searchItem"
+                                  onClick={()=> setSearch("")} key={item.id}>
+                                {item.name}
+                            </Link>
+                            )})
                         }
-                    )
+                    </Dropdown>
+
                 }
             </div>
         </header>
