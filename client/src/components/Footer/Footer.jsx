@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer>
-            Prod. Tokiyashi
+            Prod. Nikita Rogovskiy
         </footer>
     );
 };
