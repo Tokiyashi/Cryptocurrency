@@ -29,3 +29,11 @@
     display: flex;
     flex-direction: column;
 }
+@media screen and (max-width: 600px){
+    .priceChange{
+        display: none;
+    }
+    .coin{
+        flex-direction: column;
+    }
+}

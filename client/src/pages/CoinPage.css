@@ -50,7 +50,6 @@
     justify-content: center;
     display: flex;
     background-color: #F9FAFB;
-    margin: auto;
 }
 .coin__important__rank{
 
@@ -104,8 +103,46 @@
 .card__header{
 
 }
+
+.phonePriceChart {
+    display: none;
+}
 .card__content{
     font-weight: 700;
     font-size: 22px;
 }
 
+@media screen and (max-width: 600px) {
+    .coin__important{
+        flex-direction: column;
+        width: 100vw;
+    }
+    .cards{
+        flex-direction: column;
+    }
+    .coin{
+        padding: 0;
+        width: 100vw;
+    }
+    .priceChart{
+        display: none;
+    }
+    .phonePriceChart{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-top: 70px;
+        display: flex;
+        background-color: white;
+        box-shadow: 0 0 10px #b0b0b0;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .coin__important__prices__change{
+        margin-bottom: 20px;
+    }
+    .coin__important__rank{
+        margin-bottom: 20px;
+    }
+}

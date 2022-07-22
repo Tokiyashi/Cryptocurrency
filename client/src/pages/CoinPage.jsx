@@ -172,7 +172,11 @@ const CoinPage = () => {
                         }
                         <div className="priceChart">
                             <h4> Price change from last week: </h4>
-                            {<Chart inputData={marketData}/>}
+                            {<Chart width={400} height={300} inputData={marketData}/>}
+                        </div>
+                        <div className="phonePriceChart">
+                            <h4> Price change from last week: </h4>
+                            {<Chart width={300} height={200} inputData={marketData}/>}
                         </div>
                     </div>
                 }
